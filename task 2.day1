@@ -1,0 +1,33 @@
+
+let num = 100;
+let strNum = String(num);
+console.log("String() conversion:");
+console.log(strNum);           
+console.log(typeof strNum);    
+
+
+let str = "123";
+let numValue = Number(str);
+console.log("\nNumber() conversion:");
+console.log(numValue);         
+console.log(typeof numValue);  
+
+
+let invalidStr = "abc";
+let invalidNum = Number(invalidStr);
+console.log("\nInvalid Number() conversion:");
+console.log(invalidNum);       
+console.log(typeof invalidNum);
+
+
+console.log("\nImplicit conversion:");
+console.log("5" + 2);          
+console.log("5" - 2);          
+console.log(5 * "2");          
+console.log("10" / "2");       
+console.log(true + 1);        
+console.log(false + "1");      
+
+
+let result = "5" + 1;
+console.log("\nType after '5' + 1:", typeof result); // string
