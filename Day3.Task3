@@ -1,0 +1,61 @@
+
+function processUserInput(name, callback) {
+  console.log("Hello, " + name + "!");
+  callback();
+}
+
+function displayMessage() {
+  console.log("This is a callback function.");
+}
+
+processUserInput("Yokitha", displayMessage);
+
+
+
+
+function downloadFile(filename, callback) {
+  console.log("Downloading " + filename + "...");
+  setTimeout(() => {
+    console.log(filename + " downloaded successfully.");
+    callback();
+  }, 2000);
+}
+
+function afterDownload() {
+  console.log("You can now open the file.");
+}
+
+downloadFile("document.pdf", afterDownload);
+
+
+
+
+var globalVar = "I am a global variable";
+
+function scopeExample() {
+  
+  var localVar = "I am local to this function";
+  console.log(globalVar); 
+  console.log(localVar);  
+
+  
+  if (true) {
+    let blockLet = "I am block scoped with let";
+    const blockConst = "I am block scoped with const";
+    var blockVar = "I am not block scoped with var";
+
+    console.log(blockLet);
+    console.log(blockConst);   
+    console.log(blockVar);     
+  }
+  console.log(blockVar);       
+}
+
+scopeExample();
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log("var i:", i), 1000);  
+}
+
+for (let j = 0; j < 3; j++) {
+  setTimeout(() => console.log("let j:", j), 1000);
+}
