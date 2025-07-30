@@ -1,0 +1,37 @@
+
+let taskList = [];
+
+
+function addTask(task, callback) {
+    taskList.push(task);
+    callback(); 
+}
+
+// Callback function to print all tasks
+const printTasks = () => {
+    console.log("Current Tasks:");
+    taskList.forEach((task, index) => {
+        console.log(${index + 1}: ${task});
+    });
+};
+
+
+const addMultipleTasks = function(...tasks) {
+    tasks.forEach(task => taskList.push(task));
+    console.log(${tasks.length} tasks added.);
+};
+
+
+function scopeDemo() {
+    let insideFunction = "I'm inside!";
+    console.log("Inside function scope:", insideFunction);
+}
+let outsideFunction = "I'm outside!";
+scopeDemo();
+console.log("Outside function scope:", outsideFunction);
+
+
+addTask("Complete assignment", printTasks);
+addTask("Submit code", printTasks);
+addMultipleTasks("Buy groceries", "Pay bills", "Read book");
+printTasks();
