@@ -1,0 +1,21 @@
+
+const student = {
+  name: "YOKITHA",
+  age: 18,
+  displayInfo: function() {
+    console.log(`Name: ${this.name}, Age: ${this.age}`);
+  }
+};
+student.displayInfo();
+student.addCourse = function(course) {
+  if (!this.courses) {
+    this.courses = [];
+  }
+  this.courses.push(course);
+  console.log("Course added:", course);
+};
+student.addCourse("Math");
+student.addCourse("Science");
+student.age = 22; 
+student.city = "Chennai"; 
+console.log("Updated student:", student);
