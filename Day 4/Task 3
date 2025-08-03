@@ -1,0 +1,52 @@
+
+const person = {
+  name: "YOKITHA",
+  age: 18,
+  city: "Coimbatore"
+};
+
+const { name, age, city } = person;
+console.log("Name:", name);    
+console.log("Age:", age);      
+console.log("City:", city);    
+
+console.log("----------------------------");
+
+
+const student = {
+  id: 101,
+  info: {
+    name: "MOHANA",
+    grade: "O"
+  }
+};
+
+const {
+  info: { name: studentName, grade },
+  section = "B" 
+} = student;
+
+console.log("Student Name:", studentName); 
+console.log("Grade:", grade);              
+console.log("Section:", section);          
+
+console.log("----------------------------");
+
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+
+
+const clone = { ...obj1 };
+console.log("Cloned Object:", clone); 
+
+
+const merged = { ...obj1, ...obj2 };
+console.log("Merged Object:", merged); 
+
+console.log("----------------------------");
+
+
+const numbers = [10, 5, 20, 30];
+const filtered = numbers.filter(n => n > 10);
+console.log("Filtered (>10):", filtered); 
