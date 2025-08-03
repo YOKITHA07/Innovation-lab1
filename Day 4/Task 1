@@ -1,0 +1,18 @@
+const numbers = [5, 12, 8, 130, 44];
+const filtered = numbers.filter(n => n > 10);
+console.log("Filtered numbers (>10):", filtered);
+const sum = numbers.reduce((total, n) => total + n, 0);
+const product = numbers.reduce((total, n) => total * n, 1);
+console.log("Sum:", sum);
+console.log("Product:", product);
+const sliced = numbers.slice(1, 4); 
+console.log("Sliced part (1 to 3):", sliced);
+console.log("Original array after slice:", numbers);
+const spliced = [...numbers];
+spliced.splice(2, 1, 99); 
+console.log("Array after splice:", spliced);
+const cloned = [...numbers];
+const moreNumbers = [200, 300];
+const merged = [...numbers, ...moreNumbers];
+console.log("Cloned array:", cloned);
+console.log("Merged array:", merged);
