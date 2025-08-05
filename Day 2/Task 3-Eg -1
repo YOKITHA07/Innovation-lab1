@@ -1,4 +1,4 @@
-
+//Example 1//
 for (let num = 10; num <= 20; num++) {
     let isPrime = true;
 
