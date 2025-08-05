@@ -8,3 +8,8 @@ const addExpression = function(x, y) {
 };
 
 console.log(addExpression(3, 4)); 
+
+
+
+const multiply = (a, b) => a * b;
+console.log(multiply(5, 2)); 
