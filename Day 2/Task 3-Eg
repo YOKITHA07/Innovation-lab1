@@ -18,3 +18,12 @@ for (let num = 10; num <= 20; num++) {
         break; 
     }
 }
+
+
+//Example 2//
+for (let i = 1; i <= 20; i++) {
+    if (i % 2 === 0) {
+        continue; 
+    }
+    console.log(i); 
+}
